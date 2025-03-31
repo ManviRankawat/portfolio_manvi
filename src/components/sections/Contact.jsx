@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 export const Contact = () => {
   const SERVICE_ID = "service_5pbuips";
@@ -88,6 +89,33 @@ export const Contact = () => {
               Send Message
             </button>
           </form>
+
+          <div className="mt-10 flex justify-center space-x-6 text-blue-400 text-2xl">
+            <a
+              href="https://www.linkedin.com/in/manvi-rankawat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.facebook.com/ManviRankawat12"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://www.instagram.com/manvi_rankawat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition"
+            >
+              <FaInstagram />
+            </a>
+          </div>
         </div>
       </RevealOnScroll>
     </section>
