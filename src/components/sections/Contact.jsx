@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
-import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaGithub,
+} from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+
 
 export const Contact = () => {
   const SERVICE_ID = "service_5pbuips";
@@ -114,6 +121,22 @@ export const Contact = () => {
               className="hover:text-blue-500 transition"
             >
               <FaInstagram />
+            </a>
+            <a
+              href="https://github.com/ManviRankawat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://leetcode.com/u/ManviRankawat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition"
+            >
+              <SiLeetcode />
             </a>
           </div>
         </div>
