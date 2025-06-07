@@ -4,6 +4,8 @@ import gwAssistantImg from "../assets/gwassistant.png";
 import TEDxCerti from "../assets/TEDxCerti.png";
 import MUN from "../assets/MUN.png";
 import NSS from "../assets/NSS.png";
+import CC from "../assets/CodingClub.png";
+import TnP from "../assets/TnP.png";
 
 export const Leadership = () => {
   const scrollContainerRef = useRef(null);
@@ -81,10 +83,28 @@ export const Leadership = () => {
       ]
     },
     {
-      id: 5,
+        id: 5,
+        title: "Founding Member - TCET Shashtra Coding Club",
+        description: "Co-founded and established college coding community",
+        image: CC,
+        year: "2022",
+        impact: "Co-founded coding club that became college's premier programming community",
+        details: "As one of the founding members of TCET Shashtra Coding Club, helped establish the college's first dedicated programming community. Built the foundation for what became the most active technical club on campus, fostering coding culture and organizing competitive programming events.",
+        skills: ["Leadership", "Community Building", "Event Organization", "Mentoring", "Programming", "Team Management"],
+        achievements: [
+          "Co-founded TCET's first dedicated coding club from ground up",
+          "Established club constitution, structure, and core activities framework",
+          "Organized inaugural coding competitions and programming workshops",
+          "Mentored junior students in competitive programming and development",
+          "Built foundation for club that became college's premier technical community",
+          "Created lasting impact on college's programming culture"
+        ]
+      },
+    {
+      id: 6,
       title: "Training & Placement Coordinator",
       description: "Facilitated campus recruitment and student placement",
-      image: "/images/placement-coordinator.jpg",
+      image: TnP,
       year: "2018-2022",
       impact: "Achieved 85% placement rate for graduating batch",
       details: "Worked closely with career services to connect students with top-tier companies. Organized career fairs, conducted mock interviews, and provided career counseling to students across multiple disciplines.",
