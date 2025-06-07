@@ -228,7 +228,7 @@ export const Leadership = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
                 Leadership Journey
               </h2>
-              <p className="text-gray-100 text-lg max-w-xl mx-auto">
+              <p className="text-gray-100 text-lg mx-auto whitespace-nowrap">
                 Empowering communities and driving positive change through various leadership roles
               </p>
             </div>
