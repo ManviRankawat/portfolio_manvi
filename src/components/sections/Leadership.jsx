@@ -37,7 +37,7 @@ export const Leadership = () => {
       details: "Actively participated in National Service Scheme (NSS) for nearly 2 years, organizing and participating in various community service initiatives. Led multiple social service activities including election drives, environmental campaigns, and rural community support programs.",
       skills: ["Community Service", "Event Organization", "Social Impact", "Rural Development", "Healthcare Advocacy"],
       achievements: [
-        "Organized various events like Volunteering at Mahanagar Election drive, Tree plantation, CLeaning Drive (Swachhata abhiyan), Blood donation drive",
+        "Organized various events like Volunteering at Mahanagar Election drive, Tree plantation, Swachhata abhiyan, Blood donation drive",
         "Attended the social service camp at Balang Farms, Virar, and helped the villagers of Saiwan",
         "Organized free medical camp for rural communities",
         "Provided books, bags, and shoes for underprivileged students of the village",
@@ -104,7 +104,8 @@ export const Leadership = () => {
         setIsAutoScrolling(true);
         
         const container = scrollContainerRef.current;
-        const cardWidth = 306; // card width + gap
+        const isMobile = window.innerWidth < 768;
+        const cardWidth = isMobile ? window.innerWidth - 32 : 306; // Full width on mobile, card width on desktop
         const currentScroll = container.scrollLeft;
         const maxScroll = container.scrollWidth - container.clientWidth;
         
@@ -127,8 +128,10 @@ export const Leadership = () => {
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
       setIsAutoScrolling(true);
+      const isMobile = window.innerWidth < 768;
+      const scrollDistance = isMobile ? window.innerWidth - 32 : 306; // Full width on mobile, card width on desktop
       scrollContainerRef.current.scrollBy({
-        left: -306,
+        left: -scrollDistance,
         behavior: "smooth"
       });
       setTimeout(() => setIsAutoScrolling(false), 800);
@@ -138,8 +141,10 @@ export const Leadership = () => {
   const scrollRight = () => {
     if (scrollContainerRef.current) {
       setIsAutoScrolling(true);
+      const isMobile = window.innerWidth < 768;
+      const scrollDistance = isMobile ? window.innerWidth - 32 : 306; // Full width on mobile, card width on desktop
       scrollContainerRef.current.scrollBy({
-        left: 306,
+        left: scrollDistance,
         behavior: "smooth"
       });
       setTimeout(() => setIsAutoScrolling(false), 800);
@@ -151,7 +156,8 @@ export const Leadership = () => {
     const handleScroll = () => {
       if (scrollContainerRef.current) {
         const scrollLeft = scrollContainerRef.current.scrollLeft;
-        const cardWidth = 306;
+        const isMobile = window.innerWidth < 768;
+        const cardWidth = isMobile ? window.innerWidth - 32 : 306;
         const newIndex = Math.round(scrollLeft / cardWidth) % leadershipActivities.length;
         setCurrentIndex(newIndex);
       }
@@ -179,7 +185,8 @@ export const Leadership = () => {
   const goToCard = (index) => {
     if (scrollContainerRef.current) {
       setIsAutoScrolling(true);
-      const cardWidth = 306;
+      const isMobile = window.innerWidth < 768;
+      const cardWidth = isMobile ? window.innerWidth - 32 : 306;
       scrollContainerRef.current.scrollTo({
         left: index * cardWidth,
         behavior: "smooth"
@@ -230,7 +237,7 @@ export const Leadership = () => {
               {/* Horizontal Scroll Container */}
               <div 
                 ref={scrollContainerRef}
-                className="flex gap-6 overflow-x-auto scroll-smooth pb-4 px-4 md:px-12"
+                className="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth pb-4 px-2 sm:px-4 md:px-12 snap-x snap-mandatory"
                 style={{ 
                   scrollbarWidth: "none",
                   msOverflowStyle: "none"
@@ -242,10 +249,10 @@ export const Leadership = () => {
                   <div 
                     key={`${activity.id}-${Math.floor(index / leadershipActivities.length)}-${index}`}
                     onClick={() => openModal(activity)}
-                    className="min-w-[280px] md:min-w-[300px] lg:min-w-[calc(25%-18px)] bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-gray-800/50 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] group flex-shrink-0"
+                    className="min-w-[calc(100vw-2rem)] sm:min-w-[calc(100vw-3rem)] md:min-w-[300px] lg:min-w-[calc(25%-18px)] max-w-[calc(100vw-2rem)] sm:max-w-[calc(100vw-3rem)] md:max-w-none bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-gray-800/50 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] group flex-shrink-0 snap-center"
                   >
                     {/* Image Container */}
-                    <div className="relative h-48 sm:h-52 md:h-48 overflow-hidden">
+                    <div className="relative h-56 sm:h-60 md:h-48 overflow-hidden">
                       <img 
                         src={activity.image} 
                         alt={activity.title}
@@ -254,27 +261,27 @@ export const Leadership = () => {
                           e.target.src = `https://via.placeholder.com/400x250/3b82f6/ffffff?text=${encodeURIComponent(activity.title)}`;
                         }}
                       />
-                      <div className="absolute top-3 right-3 bg-blue-500/90 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs sm:text-sm font-medium">
+                      <div className="absolute top-3 right-3 bg-blue-500/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
                         {activity.year}
                       </div>
                       <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span className="text-white font-medium bg-blue-500/20 backdrop-blur-sm px-3 py-2 rounded-full border border-blue-500/30 text-sm">
+                        <span className="text-white font-medium bg-blue-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-500/30 text-sm">
                           Click to view details
                         </span>
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="p-4 sm:p-5 md:p-6">
-                      <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors leading-tight">
+                    <div className="p-5 sm:p-6">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors leading-tight">
                         {activity.title}
                       </h3>
-                      <p className="text-gray-300 text-sm mb-3 sm:mb-4 line-clamp-2">
+                      <p className="text-gray-300 text-base sm:text-lg mb-4 leading-relaxed">
                         {activity.description}
                       </p>
-                      <div className="border-t border-gray-700/50 pt-3 sm:pt-4">
-                        <span className="text-blue-400 text-xs font-semibold uppercase tracking-wide">Impact:</span>
-                        <p className="text-gray-200 text-sm mt-1 italic line-clamp-2">
+                      <div className="border-t border-gray-700/50 pt-4">
+                        <span className="text-blue-400 text-sm font-semibold uppercase tracking-wide">Impact:</span>
+                        <p className="text-gray-200 text-base sm:text-lg mt-2 italic leading-relaxed">
                           {activity.impact}
                         </p>
                       </div>
