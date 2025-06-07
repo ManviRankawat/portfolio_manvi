@@ -1,6 +1,9 @@
 import { useRef, useState, useEffect } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import gwAssistantImg from "../assets/gwassistant.png";
+import TEDxCerti from "../assets/TEDxCerti.png";
+import MUN from "../assets/MUN.png";
+import NSS from "../assets/NSS.png";
 
 export const Leadership = () => {
   const scrollContainerRef = useRef(null);
@@ -31,7 +34,7 @@ export const Leadership = () => {
       id: 2,
       title: "NSS Volunteer Work",
       description: "Community service and social development initiatives",
-      image: "/images/nss-volunteer.jpg",
+      image: NSS,
       year: "Aug 2019 - Jun 2021",
       impact: "Organized multiple community service events and social service camps",
       details: "Actively participated in National Service Scheme (NSS) for nearly 2 years, organizing and participating in various community service initiatives. Led multiple social service activities including election drives, environmental campaigns, and rural community support programs.",
@@ -45,34 +48,35 @@ export const Leadership = () => {
       ]
     },
     {
-      id: 3,
-      title: "TEDx Event Coordinator",
-      description: "Organized and managed TEDx speaking events",
-      image: "/images/tedx-event.jpg",
-      year: "2023",
-      impact: "Coordinated event for 500+ attendees with 8 speakers",
-      details: "Spearheaded the organization of TEDxUniversityName, managing everything from speaker curation to venue logistics. Successfully coordinated with international speakers and ensured seamless event execution.",
-      skills: ["Event Management", "Speaker Coordination", "Budget Management", "Marketing"],
-      achievements: [
-        "Managed ₹5L+ event budget",
-        "Coordinated with 8 international speakers",
-        "Led 20-member organizing team",
-        "Achieved 95% attendee satisfaction"
-      ]
-    },
+        id: 3,
+        title: "TEDx Event Coordinator",
+        description: "Organized and managed TEDx speaking events",
+        image: TEDxCerti,
+        year: "2022",
+        impact: "Coordinated event for 500+ attendees with 6 speakers",
+        details: "Spearheaded the organization of TEDxUniversityName, managing everything from speaker curation to venue logistics. Successfully coordinated with international speakers and ensured seamless event execution.",
+        skills: ["Event Management", "Speaker Coordination", "Budget Management", "Marketing"],
+        achievements: [
+          "Managed ₹1L+ event budget",
+          "Coordinated with 6 international speakers",
+          "Led 20-member organizing team",
+          "Achieved 95% attendee satisfaction"
+        ],
+        
+      },
     {
       id: 4,
       title: "Model United Nations Organizer",
       description: "Managed MUN conferences and delegate relations",
-      image: "/images/mun-organizer.jpg",
-      year: "2022-2024",
-      impact: "Led organizing committee for 3 successful MUN conferences",
+      image: MUN,
+      year: "2019-2020",
+      impact: "Led organizing committee for 2 successful MUN conferences",
       details: "Served as Secretary General for multiple MUN conferences, overseeing committee proceedings, delegate registration, and crisis management. Built partnerships with international schools and universities.",
       skills: ["Diplomacy", "Crisis Management", "International Relations", "Public Speaking"],
       achievements: [
-        "Organized 3 international MUN conferences",
+        "Organized 2 international MUN conferences",
         "Managed 500+ delegates from 50+ institutions",
-        "Established partnerships with 15 international schools",
+        "Established partnerships with 15 schools",
         "Introduced innovative crisis scenarios"
       ]
     },
@@ -81,7 +85,7 @@ export const Leadership = () => {
       title: "Training & Placement Coordinator",
       description: "Facilitated campus recruitment and student placement",
       image: "/images/placement-coordinator.jpg",
-      year: "2023-2024",
+      year: "2018-2022",
       impact: "Achieved 85% placement rate for graduating batch",
       details: "Worked closely with career services to connect students with top-tier companies. Organized career fairs, conducted mock interviews, and provided career counseling to students across multiple disciplines.",
       skills: ["Career Counseling", "Corporate Relations", "Interview Training", "Data Analysis"],

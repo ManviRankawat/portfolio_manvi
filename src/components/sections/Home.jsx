@@ -1,33 +1,63 @@
 import { useEffect, useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import Animation from "../assets/codingMe.gif";
-import bgGif from "../assets/bg-content.gif"; // OR use public path like "/bg-content.gif"
+import bgGif from "../assets/bg-content.gif";
 
 export const Home = () => {
   const [scrollY, setScrollY] = useState(0);
 
-useEffect(() => {
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-const bgOpacity = Math.max(0, 1 - scrollY / 300);
-
+  // Calculate blur intensity based on scroll (0 to 15px)
+  const blurIntensity = Math.min(15, scrollY / 20);
+  
+  // Calculate the blur transition boundary
+  const blurBoundary = Math.min(70, scrollY / 8);
+  const blackBoundary = Math.min(40, scrollY / 15);
 
   return (
     <section
       id="home"
       className="min-h-screen flex items-center justify-center px-6 md:px-16 relative overflow-hidden"
     >
-      {/* Background GIF */}
-      <img
-        src={bgGif}
-        alt="Background Animation"
-        className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-300"
-        style={{ opacity: bgOpacity }}
+      {/* Fixed Background GIF with Progressive Blur */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <img
+          src={bgGif}
+          alt="Background Animation"
+          className="w-full h-full object-cover fixed top-0 left-0"
+          style={{
+            filter: `blur(${blurIntensity}px)`,
+          }}
+        />
+      </div>
+
+      {/* Blur Mask Overlay - Creates the blur boundary */}
+      <div 
+        className="absolute inset-0 w-full h-full z-1 pointer-events-none"
+        style={{
+          background: `linear-gradient(to top, 
+            black 0%, 
+            rgba(0,0,0,0.9) ${blackBoundary}%, 
+            rgba(0,0,0,0.3) ${blurBoundary}%, 
+            transparent 100%)`
+        }}
+      />
+
+      {/* Sharp Black Border for Next Section Transition */}
+      <div 
+        className="absolute bottom-0 left-0 w-full pointer-events-none z-2"
+        style={{
+          height: `${Math.max(0, scrollY / 3)}px`,
+          background: 'linear-gradient(to top, #000000 0%, #000000 60%, transparent 100%)',
+          transition: 'height 0.1s ease-out'
+        }}
       />
 
       <RevealOnScroll>
@@ -38,7 +68,7 @@ const bgOpacity = Math.max(0, 1 - scrollY / 300);
               Hello, I'm Manvi
             </h1>
             <p className="text-gray-200 text-lg mb-8 max-w-md">
-              I’m a full-stack developer passionate about crafting clean, scalable web
+              I'm a full-stack developer passionate about crafting clean, scalable web
               applications. I love transforming ideas into elegant, performant, and joyful user experiences.
             </p>
 
