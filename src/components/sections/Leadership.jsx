@@ -64,7 +64,6 @@ export const Leadership = () => {
           "Led 20-member organizing team",
           "Achieved 95% attendee satisfaction"
         ],
-        
       },
     {
       id: 4,
@@ -118,10 +117,8 @@ export const Leadership = () => {
     }
   ];
 
-  // Create multiple copies for infinite scroll
   const infiniteActivities = [...leadershipActivities, ...leadershipActivities, ...leadershipActivities];
 
-  // Auto-scroll functionality
   useEffect(() => {
     const autoScroll = () => {
       if (scrollContainerRef.current && !isAutoScrolling) {
@@ -129,11 +126,10 @@ export const Leadership = () => {
         
         const container = scrollContainerRef.current;
         const isMobile = window.innerWidth < 768;
-        const cardWidth = isMobile ? window.innerWidth - 32 : 306; // Full width on mobile, card width on desktop
+        const cardWidth = isMobile ? window.innerWidth - 32 : 306; 
         const currentScroll = container.scrollLeft;
         const maxScroll = container.scrollWidth - container.clientWidth;
         
-        // If we're near the end, reset to beginning for seamless loop
         if (currentScroll >= maxScroll - cardWidth) {
           container.scrollTo({ left: 0, behavior: "smooth" });
         } else {
@@ -232,7 +228,7 @@ export const Leadership = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
                 Leadership Journey
               </h2>
-              <p className="text-gray-200 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-200 text-lg max-w-xl mx-auto">
                 Empowering communities and driving positive change through various leadership roles
               </p>
             </div>
