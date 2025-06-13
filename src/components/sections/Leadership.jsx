@@ -6,6 +6,7 @@ import MUN from "../assets/MUN.png";
 import NSS from "../assets/NSS.png";
 import CC from "../assets/CodingClub.png";
 import TnP from "../assets/TnP.png";
+import MindsEye from "../assets/MindsEye.png";
 
 export const Leadership = () => {
   const scrollContainerRef = useRef(null);
@@ -114,7 +115,23 @@ export const Leadership = () => {
         "Organized 5 major career fairs",
         "Improved placement rate by 25%"
       ]
-    }
+    },
+    {
+      id: 7,
+      title: "2nd Mind's Eye Project Winner",
+      description: "Developed a Deep Learning-based Prosthetic Arm with Neuro Sensor integration using Convolutional Neural Networks (CNN) and open-source datasets. The project aimed to enhance prosthetic control and responsiveness through advanced AI techniques.",
+      image: MindsEye,
+      year: "2018-2022",
+      impact: "Demonstrated improved accuracy in sensor signal interpretation for prosthetic movement",
+      details: "Implemented CNN models to process neuro sensor data for real-time prosthetic arm control. Utilized open-source datasets to train and validate the system, enabling intuitive and responsive prosthetic movements.",
+      skills: ["Deep Learning", "Neuro Sensors", "CNN", "Data Analysis", "Python", "Signal Processing"],
+      achievements: [
+        "Achieved high accuracy in gesture recognition",
+        "Created a functional prototype of the prosthetic arm",
+        "Presented findings to industry experts at Mind’s Eye competition",
+        "Enhanced system responsiveness using real-time data processing"
+      ]
+    }    
   ];
 
   const infiniteActivities = [...leadershipActivities, ...leadershipActivities, ...leadershipActivities];
