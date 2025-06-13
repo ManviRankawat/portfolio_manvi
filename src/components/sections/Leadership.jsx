@@ -119,7 +119,7 @@ export const Leadership = () => {
     {
       id: 7,
       title: "2nd Mind's Eye Project Winner",
-      description: "Developed a Deep Learning-based Prosthetic Arm with Neuro Sensor integration using Convolutional Neural Networks (CNN)",
+      description: "Developed a Deep Learning-based Prosthetic Arm",
       image: MindsEye,
       year: "2018-2022",
       impact: "Demonstrated improved accuracy in sensor signal interpretation for prosthetic movement",
