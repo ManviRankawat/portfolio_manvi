@@ -5,6 +5,7 @@ import TaskApp from "../assets/TaskManagement.png";
 import Detection from "../assets/Detection.png";
 import FireEvac from "../assets/FireEvac.png";
 import Valentines from "../assets/Valentines.png";
+import Fintrakr from "../assets/Fintrackr.png";
 
 const projects = [
   {
@@ -54,6 +55,14 @@ const projects = [
     techStack: ["HTML", "CSS", "JS"],
     image: Valentines,
     link: "https://valentineproposal.github.io/",
+  },
+  {
+    title: "Finance Tracker",
+    description:
+      "Angular-based personal finance tracker that helps users manage income, expenses, and budgets in real time. Built with a component-driven architecture, it features dynamic data visualization, responsive UI, and modular services for managing transactions, categories, and financial summaries.",
+    techStack: ["Angular", "HTML", "CSS", "JS"],
+    image: Fintrakr,
+    link: "https://github.com/ManviRankawat/FinTrackr",
   }
 ];
 
