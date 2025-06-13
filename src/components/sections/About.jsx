@@ -17,9 +17,9 @@ const timelineData = [
     status: "current"
   },
   {
-    date: "Oct 2022 - Aug 2023",
+    date: "Sept 2022 - Aug 2023",
     icon: <FaBriefcase className="text-emerald-400" />,
-    title: "IT - Business System Analyst",
+    title: "IT - Software Engineer/ Analyst",
     organization: "AXIS BANK",
     location: "Mumbai, India",
     type: "work",
@@ -28,13 +28,13 @@ const timelineData = [
     status: "completed"
   },
   {
-    date: "June 2022 - Oct 2022",
+    date: "June 2022 - Sept 2022",
     icon: <FaBriefcase className="text-purple-400" />,
-    title: "RPA Developer - UiPath",
+    title: "Associate Software Developer",
     organization: "PERCIPERE",
     location: "Mumbai, India",
     type: "work",
-    description: "Developed automation solutions and streamlined business processes",
+    description: "Developed automation solutions and streamlined business processes- UiPath",
     color: "purple",
     status: "completed"
   },
@@ -158,8 +158,8 @@ const Timeline = () => {
 
 // About Section
 export const About = () => {
-  const frontendSkills = ["React", "Vue", "TypeScript", "TailwindCSS", "Svelte"];
-  const backendSkills = ["Node.js", "Python", "AWS", "MongoDB", "PostGreSQL"];
+  const frontendSkills = ["React", "Angular", "TypeScript", "TailwindCSS", "Javascript"];
+  const backendSkills = ["Node.js", "Express.js", "Python", "AWS", "MongoDB", "PostGreSQL"];
 
   return (
     <>
