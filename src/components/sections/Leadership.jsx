@@ -119,17 +119,17 @@ export const Leadership = () => {
     {
       id: 7,
       title: "2nd Mind's Eye Project Winner",
-      description: "Developed a Deep Learning-based Prosthetic Arm",
+      description: "Myoelectric Prosthetic Arm using Deep Learning",
       image: MindsEye,
       year: "2018-2022",
-      impact: "Demonstrated improved accuracy in sensor signal interpretation for prosthetic movement",
-      details: "Implemented CNN models to process neuro sensor data for real-time prosthetic arm control. Utilized open-source datasets to train and validate the system, enabling intuitive and responsive prosthetic movements.",
+      impact: "Rapid response mechanism, Cost Effective",
+      details: "With Deep Learning Artificial Neural Network(ANN), Jupyter-Python Programming, Raspberry Pi3, and 3D arm model integration our team created a cost effective, responsive, convenient replacement for a body mass prosthetic arm.",
       skills: ["Deep Learning", "Neuro Sensors", "CNN", "Data Analysis", "Python", "Signal Processing"],
       achievements: [
         "Achieved high accuracy in gesture recognition",
         "Created a functional prototype of the prosthetic arm",
         "Presented findings to industry experts at Mind’s Eye competition",
-        "Enhanced system responsiveness using real-time data processing"
+        "Enhanced system responsiveness."
       ]
     }    
   ];
