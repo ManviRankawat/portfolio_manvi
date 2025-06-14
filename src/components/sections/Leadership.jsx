@@ -22,11 +22,11 @@ export const Leadership = () => {
       description: "Social media marketing and event management specialist",
       image: gwAssistantImg,
       year: "2024-2025",
-      impact: "Achieved +1,600% impression growth and +1,409% engagement increase",
+      impact: "Created web pages using Luminate, improving impressions",
       details: "Led social media marketing and event management initiatives for GWSB, creating high-engagement content and managing digital platforms. Successfully grew the university's social media presence through strategic content creation and analytics-driven campaigns.",
       skills: ["Social Media Marketing", "Content Creation", "Digital Analytics", "Event Management", "Canva Design", "Website Management"],
       achievements: [
-        "Created high-engagement LinkedIn posts and visuals using Canva for event promotions",
+        "Created content and managed updates for the university’s LinkedIn and website using modern design tools like Luminate.",
         "Managed event registration pages on the GWSB website for seamless user experience",
         "Contributed to +1,600% impression growth and +1,409% engagement increase in 2024",
         "Helped grow the audience to 7,981 followers, with top posts reaching 19,803+ impressions",
@@ -88,7 +88,7 @@ export const Leadership = () => {
         description: "Co-founded and established college coding community",
         image: CC,
         year: "2022",
-        impact: "Co-founded coding club that became college's premier programming community",
+        impact: "Co-founded coding club - college's premier programming community",
         details: "As one of the founding members of TCET Shashtra Coding Club, helped establish the college's first dedicated programming community. Built the foundation for what became the most active technical club on campus, fostering coding culture and organizing competitive programming events.",
         skills: ["Leadership", "Community Building", "Event Organization", "Mentoring", "Programming", "Team Management"],
         achievements: [
