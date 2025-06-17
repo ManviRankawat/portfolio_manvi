@@ -121,7 +121,7 @@ export const Leadership = () => {
       title: "2nd Mind's Eye Project Winner",
       description: "Myoelectric Prosthetic Arm using Deep Learning",
       image: MindsEye,
-      year: "2018-2022",
+      year: "2021-2022",
       impact: "Rapid response mechanism, Cost Effective",
       details: "With Deep Learning Artificial Neural Network(ANN), Jupyter-Python Programming, Raspberry Pi3, and 3D arm model integration our team created a cost effective, responsive, convenient replacement for a body mass prosthetic arm.",
       skills: ["Deep Learning", "Neuro Sensors", "CNN", "Data Analysis", "Python", "Signal Processing"],
