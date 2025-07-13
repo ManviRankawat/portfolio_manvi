@@ -6,8 +6,16 @@ import Detection from "../assets/Detection.png";
 import FireEvac from "../assets/FireEvac.png";
 import Valentines from "../assets/Valentines.png";
 import Fintrakr from "../assets/Fintrackr.png";
+import MovieRecommender from "../assets/movie-recommender.png";
 
 const projects = [
+  {
+    title: "Movie Recommender AI Agent",
+    description:"An intelligent movie recommendation system that uses machine learning algorithms to suggest personalized movies based on user preferences, viewing history, and ratings. The AI agent employs collaborative filtering and content-based filtering techniques to analyze user behavior patterns and movie features, delivering accurate recommendations through an interactive chatbot interface.",
+    techStack: ["Python", "Machine Learning", "NLP"],
+    image: MovieRecommender,
+    link: "https://github.com/ManviRankawat/MovieRecommendationBot",
+  },
   {
     title: "Real Time Number Plate Detection",
     description:
