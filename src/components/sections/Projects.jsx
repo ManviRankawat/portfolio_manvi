@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Movie Recommender AI Agent",
     description:"An intelligent movie recommendation system that uses machine learning algorithms to suggest personalized movies based on user preferences, viewing history, and ratings. The AI agent employs collaborative filtering and content-based filtering techniques to analyze user behavior patterns and movie features, delivering accurate recommendations through an interactive chatbot interface.",
-    techStack: ["Python", "Machine Learning", "NLP"],
+    techStack: ["Python", "Machine Learning", "NLP", "OpenAI API", "Judgment Labs Tracer", "Async Programming", "CI/CD"],
     image: MovieRecommender,
     link: "https://github.com/ManviRankawat/MovieRecommendationBot",
   },
