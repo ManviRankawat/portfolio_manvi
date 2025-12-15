@@ -6,6 +6,17 @@ import { motion } from "framer-motion";
 // Timeline Data with enhanced information
 const timelineData = [
   {
+    date: "June 2025 - Dec 2025",
+    icon: <FaBriefcase className="text-indigo-400" />,
+    title: "Software Developer Intern",
+    organization: "Get Superstars",
+    location: "Remote, United States",
+    type: "work",
+    description: "Created Admin Dashboard with data visualization graphs for insights.",
+    color: "indigo",
+    status: "current"
+  },
+  {
     date: "Aug 2023 - May 2025",
     icon: <FaGraduationCap className="text-blue-400" />,
     title: "M.S. in Computer Science",
@@ -13,8 +24,8 @@ const timelineData = [
     location: "Washington, DC",
     type: "education",
     description: "Advanced coursework in software engineering, algorithms, and system design",
-    color: "blue",
-    status: "current"
+    color: "cyan",
+    status: "completed"
   },
   {
     date: "Sept 2022 - Aug 2023",
@@ -79,7 +90,7 @@ const Timeline = () => {
         <div className="absolute left-6 w-0.5 bg-gradient-to-b from-blue-500 to-cyan-500 h-full md:hidden"></div>
 
         {sortedData.map((event, index) => {
-          const isLeft = index % 2 === 0;
+          const isLeft = event.type === 'education';
 
           return (
             <motion.div
@@ -158,7 +169,7 @@ const Timeline = () => {
 
 // About Section
 export const About = () => {
-  const frontendSkills = ["React", "Angular", "TypeScript", "TailwindCSS", "Javascript"];
+  const frontendSkills = ["React + Vite", "Angular", "TypeScript", "TailwindCSS", "Javascript"];
   const backendSkills = ["Node.js", "Express.js", "Python", "AWS", "MongoDB", "PostGreSQL"];
 
   return (
