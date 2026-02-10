@@ -8,6 +8,17 @@ const timelineData = [
   {
     date: "June 2025 - Dec 2025",
     icon: <FaBriefcase className="text-indigo-400" />,
+    title: "Full Stack Developer",
+    organization: "Gunkustom",
+    location: "Remote, United States",
+    type: "work",
+    description: "Gun parts website.",
+    color: "cyan",
+    status: "current"
+  },
+  {
+    date: "June 2025 - Dec 2025",
+    icon: <FaBriefcase className="text-indigo-400" />,
     title: "Software Developer Intern",
     organization: "Get Superstars",
     location: "Remote, United States",

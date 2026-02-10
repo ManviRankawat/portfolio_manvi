@@ -6,15 +6,15 @@ import Detection from "../assets/Detection.png";
 import FireEvac from "../assets/FireEvac.png";
 import Valentines from "../assets/Valentines.png";
 import Fintrakr from "../assets/Fintrackr.png";
-import MovieRecommender from "../assets/movie-recommender.png";
+import Webflow from "../assets/webflow.png";
 
 const projects = [
   {
-    title: "Movie Recommender AI Agent",
-    description: "An intelligent movie recommendation system that uses machine learning algorithms to suggest personalized movies based on user preferences, viewing history, and ratings. The AI agent employs collaborative filtering and content-based filtering techniques to analyze user behavior patterns and movie features, delivering accurate recommendations through an interactive chatbot interface.",
-    techStack: ["Python", "Machine Learning", "NLP", "OpenAI API", "Judgment Labs Tracer", "Async Programming", "CI/CD"],
-    image: MovieRecommender,
-    link: "https://github.com/ManviRankawat/MovieRecommendationBot",
+    title: "Prudentia Sciences Website",
+    description: "Built a fully responsive Webflow website for Prudentia Sciences that simplifies technical information into an accessible, visually refined experience. Emphasized usability, clean design systems, and smooth interactions to improve clarity, trust, and overall user journey.",
+    techStack: ["Webflow, HTML, CSS, JS, CustomCode"],
+    image: Webflow,
+    link: "https://manvismhtntask.webflow.io/",
   },
   {
     title: "Real Time Number Plate Detection",
