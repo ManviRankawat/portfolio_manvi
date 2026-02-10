@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // Timeline Data with enhanced information
 const timelineData = [
   {
-    date: "June 2025 - Dec 2025",
+    date: "Dec 2025 - Current",
     icon: <FaBriefcase className="text-indigo-400" />,
     title: "Full Stack Developer",
     organization: "Gunkustom",
